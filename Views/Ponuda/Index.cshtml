@@ -1,0 +1,23 @@
+﻿@using WebCoffe.Models
+@model List<Kava>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Popis</h2>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Naziv</th>
+        <th>Cijena</th>
+    </tr>
+    @foreach(var kava in Model)
+            {
+                <tr>
+                    <td>@kava.Id</td>
+                    <td>@kava.Naziv</td>
+                    <td>@kava.Cijena</td>
+                </tr>
+            }
+</table>
