@@ -1,7 +1,59 @@
-﻿
+﻿@using WebCoffe.Models
+@model Narudzba
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <center>
 
+    <h2 style="font-family:CaptureIt; font-size:50pt; margin-bottom:100pt">Web Shop Narudzba</h2>
+
+    @using (Html.BeginForm())
+            {
+        @Html.AntiForgeryToken()
+    <table>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Ime)</td>
+            <td>@Html.TextBoxFor(model => model.Ime)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Prezime)</td>
+            <td>@Html.TextBoxFor(model => model.Prezime)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Telefon)</td>
+            <td>@Html.TextBoxFor(model => model.Telefon)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Adresa)</td>
+            <td>@Html.TextBoxFor(model => model.Adresa)</td>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Grad)</td>
+            <td>@Html.TextBoxFor(model => model.Grad)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Postanski_broj)</td>
+            <td>@Html.TextBoxFor(model => model.Postanski_broj)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Id_poslovnica)</td>
+            <td>@Html.TextBoxFor(model => model.Id_poslovnica)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(model => model.Id_kava)</td>
+            <td>@Html.TextBoxFor(model => model.Id_kava)</td>
+        </tr>
+    </table>
+
+            }
+    </center>
+</div>

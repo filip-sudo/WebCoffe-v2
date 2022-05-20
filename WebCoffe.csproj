@@ -242,6 +242,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Kava.cs" />
+    <Compile Include="Models\Narudzba.cs" />
     <Compile Include="Models\web_coffeeDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

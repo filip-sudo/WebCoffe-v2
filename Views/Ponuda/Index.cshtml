@@ -3,21 +3,25 @@
 @{
     ViewBag.Title = "Index";
 }
+<link rel="stylesheet" href="~/Content/Site.css">
+<div class="jumbotron">
+    <center>
+    <h2 style="font-family:CaptureIt2;font-size:50pt">Popis</h2>
 
-<h2>Popis</h2>
-
-<table border="1">
-    <tr>
-        <th>Id</th>
-        <th>Naziv</th>
-        <th>Cijena</th>
-    </tr>
-    @foreach(var kava in Model)
-            {
-                <tr>
-                    <td>@kava.Id</td>
-                    <td>@kava.Naziv</td>
-                    <td>@kava.Cijena</td>
-                </tr>
-            }
-</table>
+    <table id="popis" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Naziv</th>
+            <th>Cijena</th>
+        </tr>
+        @foreach (var kava in Model)
+        {
+            <tr>
+                <td>@kava.Id</td>
+                <td>@kava.Naziv</td>
+                <td>$@kava.Cijena</td>
+            </tr>
+        }
+    </table>
+    </center>
+</div>

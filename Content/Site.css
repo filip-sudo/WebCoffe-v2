@@ -24,10 +24,44 @@ textarea {
 }
 
 @font-face {
-    font-family: CaptureIt;
+    font-family: CaptureIt2;
     src: url(../fonts/Capture_it/Capture_it_2.ttf);
     font-weight: bold;
 }
-.home_naslov{
-    font-family:CaptureIt;
+
+@font-face {
+    font-family: CaptureIt;
+    src: url(../fonts/Capture_it/Capture_it.ttf);
+    font-weight: bold;
 }
+
+.home_naslov{
+    font-family:CaptureIt2;
+}
+
+#popis {
+    font-family: CaptureIt;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#popis td, #popis th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#popis tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#popis tr:hover {
+    background-color: #ddd;
+}
+
+    #popis th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(70, 70, 70);
+        color: white;
+    }
