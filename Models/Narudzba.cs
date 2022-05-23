@@ -28,7 +28,6 @@ namespace WebCoffe.Models
 
         [Column("telefon")]
         [Required(ErrorMessage = "{0} je obavezno")]
-        [StringLength(25, MinimumLength = 8, ErrorMessage = "{0} mora biti duljine minimalno {2}, a maksimalno {1} znakova")]
         [Display(Name = "Broj telefona")]
         public int Telefon { get; set; }
 
@@ -46,19 +45,16 @@ namespace WebCoffe.Models
 
         [Column("postanski_broj")]
         [Required(ErrorMessage = "{0} je obavezno")]
-        [StringLength(11, MinimumLength = 3, ErrorMessage = "{0} mora biti duljine minimalno {2}, a maksimalno {1} znakova")]
         [Display(Name = "Postanski broj")]
         public int Postanski_broj { get; set; }
 
         [Column("id_poslovnica")]
         [Required(ErrorMessage = "{0} je obavezno")]
-        [StringLength(11, MinimumLength = 1, ErrorMessage = "{0} mora biti duljine minimalno {2}, a maksimalno {1} znakova")]
         [Display(Name = "Poslovnica")]
         public int Id_poslovnica { get; set; }
 
         [Column("id_kava")]
         [Required(ErrorMessage = "{0} je obavezno")]
-        [StringLength(11, MinimumLength = 1, ErrorMessage = "{0} mora biti duljine minimalno {2}, a maksimalno {1} znakova")]
         [Display(Name = "Proizvod")]
         public int Id_kava { get; set; }
     }

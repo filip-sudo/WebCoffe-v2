@@ -17,6 +17,5 @@ namespace WebCoffe.Controllers
 
             return View(kave);
         }
-
     }
 }

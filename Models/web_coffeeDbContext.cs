@@ -11,5 +11,8 @@ namespace WebCoffe.Models
     public class web_coffeeDbContext : DbContext
     {
         public DbSet<Kava> PopisKave { get; set; }
+
+        public DbSet<Narudzba> PopisNarudzbi { get; set; }
+
     }
 }
