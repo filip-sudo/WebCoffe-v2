@@ -45,12 +45,12 @@
 
         <tr>
             <td>@Html.LabelFor(model => model.Id_poslovnica)</td>
-            <td>@Html.TextBoxFor(model => model.Id_poslovnica)</td>
+            <td>@Html.EnumDropDownListFor(model => model.Id_poslovnica)</td>
         </tr>
 
         <tr>
             <td>@Html.LabelFor(model => model.Id_kava)</td>
-            <td>@Html.TextBoxFor(model => model.Id_kava)</td>
+            <td>@Html.EnumDropDownListFor(model => model.Id_kava)</td>
         </tr>
     </table>
     @Html.ValidationSummary(true, "Spremanje nije uspjelo!");

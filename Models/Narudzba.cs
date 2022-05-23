@@ -51,11 +51,11 @@ namespace WebCoffe.Models
         [Column("id_poslovnica")]
         [Required(ErrorMessage = "{0} je obavezno")]
         [Display(Name = "Poslovnica")]
-        public int Id_poslovnica { get; set; }
+        public PoslovniceEnum Id_poslovnica { get; set; }
 
         [Column("id_kava")]
         [Required(ErrorMessage = "{0} je obavezno")]
         [Display(Name = "Proizvod")]
-        public int Id_kava { get; set; }
+        public KavaEnum Id_kava { get; set; }
     }
 }

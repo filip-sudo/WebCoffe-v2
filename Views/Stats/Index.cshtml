@@ -1,7 +1,57 @@
-﻿
+﻿@using WebCoffe.Models
+@model List<Narudzba> 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Stats";
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int l = 0;
 }
+<div class="jumbotron">
+    <center>
 
-<h2>Index</h2>
+        <h2 style="font-family:CaptureIt2;font-size:50pt">Stats</h2>
 
+        <table id="popis" border="1">
+            <tr>
+                <th>Poslovnica</th>
+                <th>Prodanih Proizvoda</th>
+            </tr>
+            @foreach (var narudzba in Model)
+            {
+                if (narudzba.Id_poslovnica == PoslovniceEnum.prva)
+                {
+                    i++;
+                }
+                if (narudzba.Id_poslovnica == PoslovniceEnum.druga)
+                {
+                    j++;
+                }
+                if (narudzba.Id_poslovnica == PoslovniceEnum.treca)
+                {
+                    k++;
+                }
+                if (narudzba.Id_poslovnica == PoslovniceEnum.cetvrta)
+                {
+                    l++;
+                }
+            }
+            <tr>
+                <td>Prva</td>
+                <td>@i</td>
+            </tr>
+            <tr>
+                <td>Druga</td>
+                <td>@j</td>
+            </tr>
+            <tr>
+                <td>Treca</td>
+                <td>@k</td>
+            </tr>
+            <tr>
+                <td>Cetvrta</td>
+                <td>@l</td>
+            </tr>
+        </table>
+    </center>
+</div>
