@@ -14,5 +14,9 @@ namespace WebCoffe.Models
 
         public DbSet<Narudzba> PopisNarudzbi { get; set; }
 
+        public DbSet<Korisnik> PopisKorisnika { get; set; }
+
+        public DbSet<Ovlast> PopisOvlasti { get; set; }
+
     }
 }

@@ -1,0 +1,39 @@
+﻿@model WebCoffe.Models.KorisnikPrijava
+@{
+    ViewBag.Title = "Unesi podatke: ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+        <h2 style="font-family:CaptureIt2;font-size:50pt">@ViewBag.Title</h2>
+
+        @using (Html.BeginForm("Prijava", "Korisnici", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, null))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                <div class="from-group">
+                    @Html.LabelFor(model => model.KorisnickoIme, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.KorisnickoIme, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Lozinka, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(model => model.Lozinka, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p style="color:white"><input type="submit" value="Prijava" style="margin-top:50pt; background-color:rgb(50,50,50); font-family:CaptureIt; font-size:20pt" /></p>
+                    </div>
+                </div>
+            </div>
+        }
+</div>

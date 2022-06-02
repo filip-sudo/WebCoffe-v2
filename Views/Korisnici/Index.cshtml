@@ -1,0 +1,32 @@
+﻿@using WebCoffe.Models
+@model List<Korisnik>
+@{
+    ViewBag.Title = "Popis korisnika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/Site.css">
+
+<h2>@ViewBag.Title</h2>
+
+<table id="popis" border="1">
+    <thead>
+        <tr>
+            <th>Korisničko ime</th>
+            <th>Email</th>
+            <th>Prezime i ime</th>
+            <th>Ovlast</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kor in Model)
+            {
+                <tr>
+                    <td>@kor.KorisnickoIme</td>
+                    <td>@kor.Email</td>
+                    <td>@kor.PrezimeIme</td>
+                    <td>@kor.Ovlast.Naziv</td>
+                </tr>
+            }
+    </tbody>
+</table>
+

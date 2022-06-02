@@ -234,6 +234,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KorisniciController.cs" />
     <Compile Include="Controllers\MapaController.cs" />
     <Compile Include="Controllers\PonudaController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
@@ -241,9 +242,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Misc\LogiraniKorisnik.cs" />
+    <Compile Include="Misc\LogiraniKorisnikSerializeModel.cs" />
+    <Compile Include="Misc\OvlastiKorisnik.cs" />
+    <Compile Include="Misc\PasswordHelper.cs" />
     <Compile Include="Models\Kava.cs" />
     <Compile Include="Models\KavaEnum.cs" />
+    <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\KorisnikPrijava.cs" />
     <Compile Include="Models\Narudzba.cs" />
+    <Compile Include="Models\Ovlast.cs" />
     <Compile Include="Models\PoslovniceEnum.cs" />
     <Compile Include="Models\web_coffeeDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +296,8 @@
     <Content Include="Views\Stats\Index.cshtml" />
     <Content Include="Views\Ponuda\Index.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Korisnici\Index.cshtml" />
+    <Content Include="Views\Korisnici\Prijava.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
