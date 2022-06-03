@@ -24,7 +24,12 @@ namespace WebCoffe.Controllers
 
             bazaPodataka.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Potvrda");
+        }
+
+        public ActionResult Potvrda()
+        {
+            return View();
         }
     }
 }
